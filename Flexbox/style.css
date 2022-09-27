@@ -1,0 +1,42 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.container{
+    background-color: darkgray;
+    min-height:100vh;   
+    display:flex;
+    flex-direction:column;
+    gap:15px 0px; /*column-gap é o gap entre colunas e row-gap é o gap entre linhas. A propridade gap é a junção de column-gap e row-gap.*/ 
+    justify-content:space-evenly; /*alinhamento horizontal para row e vertical para column*/
+    align-items:center; /*alinhamento vertical para row e horizontal para column*/
+    /* flex-wrap:wrap; */
+}
+
+.item{
+    width:100%;
+    /* height:600px; */
+    border: 2px solid black;
+    background-color: white;
+    font-size:20px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.item2{
+/* Três valores: flex-grow | flex-shrink | flex-basis */
+/*O flex-shrink está ligado agora a diminuição dos nosso itens. Nós vamos usar no item 1 esse shrink, o valor padrão dele é 1, vamos colocar 2, isso vai fazer com que ele diminuia primeiro em relação aos outros 2 quando chegar no limite do basis. Vamos desativar o “wrap” para conseguir ver isso acontecendo de fato. Agora, acontece o inverso caso a gente coloque 0 nesse nosso shrink. Isso vai fazer que ele não diminua quando chegar em 200px, que é o nosso basis.
+
+O flex-grow é uma forma que temos de aumentar o tamanho dos itens sem fazer com que eles quebrem de forma imediata, nós vamos colocar através de números, colocaremos 1. 
+
+O flex basis é o tamanho do item. Nós vamos tirar o width e colocar o flex-basis. A diferença entre eles é mínima, nós vamos utilizar o basis por ser algo mais “correto”, acaba sendo uma boa prática utilizar o elemento do flex, já que estamos usando o flex.
+
+
+
+*/
+flex: 0 2 200px;
+}
